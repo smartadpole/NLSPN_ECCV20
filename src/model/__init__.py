@@ -15,7 +15,11 @@ from importlib import import_module
 
 
 def get(args):
-    model_name = args.model_name + 'Model'
+    if hasattr(args, "model_name"):
+        name = args.model_name
+    else:
+        name = args
+    model_name = name + 'Model'
     module_name = 'model.' + model_name.lower()
     module = import_module(module_name)
 

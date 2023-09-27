@@ -2,3 +2,7 @@ __pycache__/
 *.pyc
 .idea/
 experiments/
+results/
+dist/
+build/
+DCN.egg-info/
